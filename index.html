@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="author" content="">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>BONAFIDE Consulting</title>
+<meta name="Googlebot" content="index, follow">
+<meta name="revisit-after" content="3">
+<meta name="Robots" content="INDEX, FOLLOW">
+    
+<meta property="og:site_name" content="">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:description" content="">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:title" content="">
+<meta property="og:url" content="">
+
+<link rel="alternate" hreflang="en-GB" href="" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/framework.css" rel="stylesheet" type="text/css" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="images/fav.png" />
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/modernizr.js"></script>
+
+<script>
+window.onresize = displayWindowSize;
+window.onload = displayWindowSize;
+function displayWindowSize() {
+    var myWidth = 0, myHeight = 0;
+    if( typeof( window.innerWidth ) == 'number' ) {
+        myWidth = window.innerWidth; myHeight = window.innerHeight;
+    } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+        myWidth = document.documentElement.clientWidth; myHeight = document.documentElement.clientHeight;
+    } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        myWidth = document.body.clientWidth; myHeight = document.body.clientHeight;
+    }
+	
+	$("#body").css({'margin-top':myHeight});
+};
+$.fn.myFixture = function (settings) {
+  return this.each(function () {
+    
+    // default css declaration 
+    var elem = $(this).css('position', 'fixed');
+    
+    var setPosition = function () {         
+      	var top = 0;
+      	// get no of pixels hidden above the the window     
+      	var scrollTop = $(window).scrollTop();    
+      	// get elements distance from top of window
+      	var topBuffer = ((settings.topBoundary || 0) - scrollTop);
+      	// update position if required
+      	if (topBuffer >= 0) { top += topBuffer }
+      	elem.css('top', top);      
+    };
+        
+    $(window).bind('scroll', setPosition);
+    setPosition();
+  });
+};
+$('#menu-container').myFixture({ topBoundary: 0 });
+
+</script>
+
+</head>
+<body>
+<div id="bg"></div>
+<div id="menu-container" data-0="background: rgba(55, 19, 19,0);" data-200="background: rgba(55, 19, 19,1);">
+    <div id="menu-content">
+        <div id="logo"><a href="#"><img src="images/logo.png" alt="bonafide logo"></a></div>
+        <div id="menu">
+            <a href="#" class="transition">Home</a>
+            <a href="#" class="transition">Services</a>
+            <a href="#" class="transition">Clients</a>
+            <a href="#" class="transition">Blog</a>
+            <a href="#" class="transition">About us</a>
+            <a href="#" class="transition"	>Contact</a>
+	    </div>
+    </div>
+</div>
+<div id="body"></div>
+<script>
+if( /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
+}else{
+document.write('<script type="text/javascript" src="js/skrollr.min.js"><\/script>');
+ }
+</script>
+<script type="text/javascript">
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+				return 1-p;
+		}
+	}
+});
+</script>
+
+</body>
+</html>	
