@@ -27,7 +27,8 @@
 
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/custom.js"></script>
-<script src="js/modernizr.js"></script>
+
+<link href="css/owl.carousel.min.css" rel="stylesheet">
 
 <script>
 window.onresize = displayWindowSize;
@@ -42,7 +43,7 @@ function displayWindowSize() {
         myWidth = document.body.clientWidth; myHeight = document.body.clientHeight;
     }
 	
-	$("#body").css({'margin-top':myHeight});
+	$("#bg").css({'height':myHeight});
 };
 $.fn.myFixture = function (settings) {
   return this.each(function () {
@@ -68,15 +69,28 @@ $.fn.myFixture = function (settings) {
 $('#menu-container').myFixture({ topBoundary: 0 });
 
 </script>
+<script>
+$(window).load(function() { // makes sure the whole site is loaded
+	$(".preloader").delay(300).fadeOut(); // will first fade out the loading animation
+	$(".overlay3").delay(500).fadeOut("normal"); // will fade out the white DIV that covers the website.
+})
+</script>
 
 </head>
 <body>
-<div id="bg"></div>
+<div class="overlay3">
+    <div class="preloader"></div>
+</div>
+<div id="bg">
+	<div class="bg-anim"></div>
+	<span id="bg-title" class="cl1 delay-1-5s">"The team <Br>with the best players<br>wins"<bR><small style="font-size: 20px; text-transform:none">Jack Welch</small></span>
+  <a href="#body" class="strelica"></a>
+</div>
 <div id="menu-container" data-0="background: rgba(55, 19, 19,0);" data-200="background: rgba(55, 19, 19,1);">
     <div id="menu-content">
-        <div id="logo"><a href="#"><img src="images/logo.png" alt="bonafide logo"></a></div>
+        <div id="logo"><a href="index.html"><img src="images/logo.png" alt="bonafide logo"></a></div>
         <div id="menu">
-            <a href="#" class="transition">Home</a>
+            <a href="index.html" class="transition">Home</a>
             <a href="#" class="transition">Services</a>
             <a href="#" class="transition">Clients</a>
             <a href="#" class="transition">Blog</a>
@@ -85,7 +99,129 @@ $('#menu-container').myFixture({ topBoundary: 0 });
 	    </div>
     </div>
 </div>
-<div id="body"></div>
+<section id="body">
+    <div id="section-content" class="clearfix">
+    	<div id="section-title" class="centertext wp1"><h1>SERVICES</h1></div>
+    	<div id="section-sub-title" class="wp2 centertext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</div>
+        <div id="services-panels" class="p1">
+			<div class="service-item col span_1_of_4 centertext">
+            	<div class="service-icon prvi"><img src="images/headhunting-icon.jpg"></div>
+           	  	<div class="service-title">Headhunting</div>
+            	<div class="service-desc">
+                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </div>
+                <a href="#" class="service-button">MORE INFO</a>
+		  	</div>
+			<div class="service-item col span_1_of_4 centertext">
+            	<div class="service-icon"><img src="images/recuitment-icon.jpg"></div>
+           	  	<div class="service-title">Recruitment</div>
+            	<div class="service-desc">
+                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </div>
+		  	</div>
+			<div class="service-item col span_1_of_4 centertext">
+            	<div class="service-icon"><img src="images/contracting-icon.jpg"></div>
+           	  	<div class="service-title">Contracting</div>
+            	<div class="service-desc">
+                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </div>
+		  	</div>
+			<div class="service-item col span_1_of_4 centertext">
+            	<div class="service-icon"><img src="images/advisory-icon.jpg"></div>
+           	  	<div class="service-title">Recruitment advisory</div>
+            	<div class="service-desc">
+                	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                </div>
+		  	</div>
+        </div>
+	</div>	
+</section>
+
+<section id="section" class="clients">
+    <div id="section-content" class="clearfix">
+        <div class="big-title2 uptext centertext white-text mrgB30">Some Of <span class="gray-text">Our Clients</span></div>
+		<div id="clients-slider">
+			<div id="owl-logos" class="owl-carousel" style="margin: 0;">  
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/mclaren.png" alt="BONAFIDE" title="mclaren"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/astom.png" alt="BONAFIDE" title="astom"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/lamborgini.png" alt="BONAFIDE" title="lamborgini"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/jaguar.png" alt="BONAFIDE" title="jaguar"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/mclaren.png" alt="BONAFIDE" title="mclaren"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/astom.png" alt="BONAFIDE" title="astom"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/lamborgini.png" alt="BONAFIDE" title="lamborgini"></a></div>
+            <div class="item"><a href="javascript:;" title="" target="_blank"><img id="logos-img" src="images/clients/jaguar.png" alt="BONAFIDE" title="jaguar"></a></div>
+			</div>
+        </div>
+    </div>
+</section>
+
+<section id="section" class="testimonials">
+    <div id="section-content" class="clearfix padB10">
+    	<div class="testimonial-item wp3">
+        <img src="images/quotes.png" class="quotes" />
+	        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and 
+            scrambled it to make a type specimen book unknown printer took a galley of type and scrambled it to make a type specimen book.
+            <span class="orange-line"></span>
+            <span class="author wp4 delay-05s">John Johnson, <span class="gray">McLaren Automotive</span></span><br>
+            <a href="#" class="clients-all transition wp5 delay-1s">ALL CLIENTS</a>
+        </div>
+    </div>
+</section>
+
+<section id="section" class="about-section">
+    <div id="section-content" class="clearfix">
+		<div id="about-section-title" class="">bonafide</div>
+		<div id="about-section-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </div>
+		<div id="button-holder"><a href="#" class="about-section-button transition wp6">our team</a></div>
+    </div>
+</section>
+    </div>
+</section>
+
+<section id="section" class="footer">
+    <div id="section-content" class="clearfix centertext">
+    	<div id="section" class="wp8"><img src="images/footer-logo.jpg" width="333" height="89"></div>
+        <div id="section" class="mrgT20">
+            <div class="col span_1_of_2 centertext">Copyright  2015.  <span class="uptext bold">bonafide consulting</span>.  All right reserved.</div>
+            <p class="mobile mrgT10"></p>
+            <div class="col span_1_of_2 centertext uptext">
+            	<span class="mrgR10">design & development by</span> 
+            	<a href="http://www.halfull.co.uk" target="_blank"><img src="images/half-logo.png" class="footer-logo"></a>
+            </div>
+	    </div>
+    </div>
+</section>
+
+<script src="js/owl.carousel.js"></script>
+<script>
+    jQuery(document).ready(function() {
+
+		$('#owl-logos').owlCarousel({
+			margin:80,
+			loop:true,
+			autoWidth:true,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true,
+		    nav:false,
+			pagination: true,
+			items:4
+		})
+	  
+		$('#owl-testimonials').owlCarousel({
+			margin:0,
+			loop:true,
+			autoWidth:false,
+			autoplay:true,
+			autoplayTimeout:3000,
+			autoplayHoverPause:true,
+		    nav:true,
+			items:1
+		})
+    });
+</script>
+
 <script>
 if( /Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)){
 }else{
@@ -103,6 +239,7 @@ var s = skrollr.init({
 	}
 });
 </script>
+<script src="js/waypoints.min.js"></script>
 
 </body>
 </html>	
